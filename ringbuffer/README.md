@@ -1,14 +1,21 @@
 # Ring Buffer
 
-A lightweight FIFO ring buffer implementation for embedded systems.
+A lightweight FIFO ring buffer implementation in C for embedded systems.
 
 ## Features
 
 - Fixed-size buffer
 - No dynamic memory allocation
+- FIFO operation
 - Overflow protection
 - Underflow protection
 - Circular indexing
+
+## Files
+
+- ringbuffer.c - Implementation
+- ringbuffer.h - Public API
+- test.c - Test application
 
 ## Example
 
@@ -19,7 +26,7 @@ RingBuffer_t rb;
 RingBuffer_Init(&rb, storage, 8);
 
 RingBuffer_Put(&rb, 'A');
-RingBuffer_Put(&rb, 'B');
 
 uint8_t data;
 RingBuffer_Get(&rb, &data);
+```
